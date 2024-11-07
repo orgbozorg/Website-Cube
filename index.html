@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cube {
+            perspective:1000px;
+        }
+        .myCube {
+            width:2em;
+            font-size:3em;
+            margin:1.5em auto;
+            transform:rotateY(30deg) rotateX(-20deg);
+            transform-style:preserve-3d;
+        }
+        .side {
+            width:2em;
+            height:2em;
+            line-height:1.5em;
+            border: 1px solid black;
+            text-align:center;
+            position:absolute;
+            background-color: rgb(255, 0, 0);
+        }
+        .front {
+            transform:translateZ(1em);
+        }
+        .right {
+            transform:rotateY(90deg) translateZ(1em);
+        }
+        .left {
+            transform:rotateY(-90deg) translateZ(1em);
+        }
+        .back {
+            transform: rotateY(180deg) translateZ(1em);;
+        }
+        .top {
+            transform: rotateX(90deg) translateZ(1em);;
+        }
+        .bottom {
+            transform: rotateX(-90deg) translateZ(1em);;
+        }
+    </style>
+</head>
+<body>
+    <div class="cube">
+        <div class="myCube">
+            <div class="side top"></div>
+            <div class="side bottom"></div>
+            <div class="side right"></div>
+            <div class="side left"></div>
+            <div class="side back"></div>
+            <div class="side front"></div>
+        </div>
+    </div>
+</body>
+</html>
